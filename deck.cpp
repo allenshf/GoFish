@@ -13,17 +13,26 @@ Deck::Deck(){
 }
 
 void Deck::shuffle(){
-
+    int numCards = SIZE;
+    for(int i = 0; i < SIZE*2; i++){
+        int firstCardIndex = (rand() % numCards);
+        int secondCardIndex = (rand() % numCards);
+        Card temp = myCards[secondCardIndex];
+        myCards[secondCardIndex] = myCards[firstCardIndex];
+        myCards[firstCardIndex] = temp;
+    }
 }
-Card Deck::dealCard(){
-
-    return myCards[myIndex];
+Card Deck::dealCard() {
+    if (myIndex == SIZE){
+        printf("Deck full");
+        Card temp;              //Return default if nothing *FIX ThIS*
+        return temp;
+    }
+    Card top = myCards[myIndex];
+    myIndex++;
+    return top;
 }
 
 int  Deck::size() const{
-    return 0;
-}
-
-Deck::~Deck(){
-
+    return SIZE - myIndex;
 }
