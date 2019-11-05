@@ -1,6 +1,6 @@
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
-#include <ctime>;
+#include <ctime>
 #include "card.h"
 #include "deck.h"
 
