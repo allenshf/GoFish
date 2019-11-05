@@ -35,6 +35,7 @@ string Card::suitString(Suit s) const{
         return "h";
     else if(s == spades)
         return "s";
+    return "";
 }
 
 string Card::rankString(int r) const{
@@ -51,6 +52,7 @@ string Card::rankString(int r) const{
         return "Q";
     if(r == 13)
         return "K";
+    return "";
 }
 
 
