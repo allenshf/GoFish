@@ -42,9 +42,7 @@ string Card::rankString(int r) const{
     if(r == 1)
         return "A";
     if(r >= 2 && r <= 10){
-        char val = r + 0x30;
-        string temp = "" + val;
-        return temp;
+        return to_string(r);
     }
     if(r == 11)
         return "J";
@@ -54,7 +52,6 @@ string Card::rankString(int r) const{
         return "K";
     return "";
 }
-
 
 bool Card::operator == (const Card& rhs) const{
     if(mySuit != rhs.mySuit)
@@ -70,7 +67,7 @@ bool Card::operator != (const Card& rhs) const{
     }
     return true;
 }
-ostream& Card::operator << (ostream& out, const Card& c){
+ostream& operator << (ostream& out, const Card& c){
     out<< c.toString();
     return out;
 }

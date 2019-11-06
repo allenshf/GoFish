@@ -10,6 +10,27 @@ using namespace std;
 Deck::Deck(){
     myIndex = 0;
     srand((unsigned)time(0));
+    int i = 0;
+    for(int j = 1; j <= 13; j++){
+        Card temp(j,Card::spades);
+        myCards[i] = temp;
+        i++;
+    }
+    for(int j = 1; j <= 13; j++){
+        Card temp(j,Card::hearts);
+        myCards[i] = temp;
+        i++;
+    }
+    for(int j = 1; j <= 13; j++){
+        Card temp(j,Card::diamonds);
+        myCards[i] = temp;
+        i++;
+    }
+    for(int j = 1; j <= 13; j++){
+        Card temp(j,Card::clubs);
+        myCards[i] = temp;
+        i++;
+    }
 }
 
 void Deck::shuffle(){
