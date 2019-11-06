@@ -67,10 +67,11 @@ bool Player::cardInHand(Card c) const{
 //Remove the card c from the hand and return it to the caller
 Card Player::removeCardFromHand(Card c){
     Card removed;
-    for(vector<Card>::iterator it = myHand.begin(); it != myHand.end();it++){
-        if(*it == c){
-            removed = *it;
-            myHand.erase(it);
+    for(int i = 0; i < myHand.size();i++){
+        Card temp = myHand[i];
+        if(temp == c){
+            removed = temp;
+            myHand.erase(myHand.begin() + i);
         }
     }
     return removed;
