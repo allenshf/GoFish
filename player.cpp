@@ -1,3 +1,8 @@
+//Player.cpp file
+// Names: Allen Shufer and Ryan Root
+// EID: as87226 and rmr3494
+// Section: 16045
+
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include "card.h"
@@ -6,14 +11,17 @@
 
 using namespace std;
 
+//default constructor
 Player::Player(){
 
 }
 
-
+//adds a card to hand
 void Player::addCard(Card c){
     myHand.push_back(c);
 }
+
+//books pair of cards
 void Player::bookCards(Card c1, Card c2){
     myBook.push_back(c1);
     myBook.push_back(c2);
@@ -77,6 +85,7 @@ Card Player::removeCardFromHand(Card c){
     return removed;
 }
 
+//Shows the hand
 string Player::showHand() const{
     string out ="";
     for(int i = 0; i < myHand.size(); i++){
@@ -84,6 +93,8 @@ string Player::showHand() const{
     }
     return out;
 }
+
+//Shows booked pairs
 string Player::showBooks() const{
     string out = "";
     for(int i = 0; i < myBook.size(); i+=2){
@@ -92,9 +103,12 @@ string Player::showBooks() const{
     return out;
 }
 
+//returns hand size
 int Player::getHandSize() const{
     return myHand.size();
 }
+
+//returns booked pairs
 int Player::getBookSize() const{
     return myBook.size() / 2;
 }

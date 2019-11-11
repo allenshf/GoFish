@@ -1,3 +1,8 @@
+// Deck.cpp file
+// Names: Allen Shufer and Ryan Root
+// EID: as87226 and rmr3494
+// Section: 16045
+
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include <ctime>
@@ -7,7 +12,7 @@
 
 using namespace std;
 
-
+//Default constructor for a deck
 Deck::Deck(){
     myIndex = 0;
     srand((unsigned)time(0));
@@ -34,6 +39,7 @@ Deck::Deck(){
     }
 }
 
+//Shuffles the deck
 void Deck::shuffle(){
     int numCards = SIZE;
     for(int i = 0; i < SIZE*2; i++){
@@ -44,6 +50,8 @@ void Deck::shuffle(){
         myCards[firstCardIndex] = temp;
     }
 }
+
+//Deals card to a hand
 Card Deck::dealCard() {
     if (myIndex == SIZE){
         cout << "Deck full";
@@ -55,6 +63,7 @@ Card Deck::dealCard() {
     return top;
 }
 
+//Returns current size of the deck
 int  Deck::size() const{
     return SIZE - myIndex;
 }

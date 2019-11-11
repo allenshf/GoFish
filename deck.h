@@ -4,6 +4,10 @@
 // When a Deck is constructed, it contains 52 cards
 // in a "regular" order (aces, twos, threes, ... , kings)
 //
+// Names: Allen Shufer and Ryan Root
+// EID: as87226 and rmr3494
+// Section: 16045
+//
 // Shuffling a deck makes it consist of 52 cards in a random order
 //
 // dealCard() returns a card from the deck and decreases the

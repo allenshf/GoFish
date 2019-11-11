@@ -1,5 +1,9 @@
 //File Name: card.h
 //
+// Names: Allen Shufer and Ryan Root
+// EID: as87226 and rmr3494
+// Section: 16045
+//
 //Written by Owen Astrachan and Roger Priebe
 // This class represents a playing card, i.e., "ace of spades"
 // a Card is constructed from a rank (int in range 1..13)

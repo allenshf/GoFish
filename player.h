@@ -1,6 +1,11 @@
 // FILE:  player.h
 // written by Roger Priebe
 // 1/22/08 (revised 9/2/08)
+//
+// Names: Allen Shufer and Ryan Root
+// EID: as87226 and rmr3494
+// Section: 16045
+//
 // This class represents a player in a card game that takes "tricks"
 // The "Books" represent a container for holding tricks
 
@@ -19,18 +24,21 @@ using namespace std;
 class Player
 {
 public:
+    //Default Constructor
     Player();
 
+    //Constructor
     Player(string name) {
         myName = name;
     }
 
+    //Returns player name
     string getName() const {
         return myName;
     }
 
     void addCard(Card c);  //adds a card to the hand
-    void bookCards(Card c1, Card c2);
+    void bookCards(Card c1, Card c2); //books cards when pair exists
 
     //OPTIONAL
     // comment out if you decide to not use it
@@ -54,11 +62,11 @@ public:
     //Remove the card c from the hand and return it to the caller
     Card removeCardFromHand(Card c);
 
-    string showHand() const;
-    string showBooks() const;
+    string showHand() const; //shows the hand
+    string showBooks() const; //shows booked pairs
 
-    int getHandSize() const;
-    int getBookSize() const;
+    int getHandSize() const; //returns hand size
+    int getBookSize() const; //returns booked pairs
 
     //OPTIONAL
     // comment out if you decide to not use it
