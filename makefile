@@ -1,7 +1,7 @@
-final: card_demo.o player.o deck.o card.o
-	g++ -otest card_demo.o player.o deck.o card.o
-driver: card_demo.cpp player.h deck.h card.h
-	g++ -c card_demo.cpp
+final: go_fish.o player.o deck.o card.o
+	g++ -otest go_fish.o player.o deck.o card.o
+driver: go_fish.cpp player.h deck.h card.h
+	g++ -c go_fish.cpp
 player.o: player.cpp player.h deck.h card.h
 	g++ -c player.cpp
 deck.o: deck.cpp deck.h card.h

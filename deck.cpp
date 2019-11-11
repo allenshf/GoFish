@@ -1,6 +1,7 @@
 #include <iostream>    // Provides cout and cin
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include <ctime>
+
 #include "card.h"
 #include "deck.h"
 
@@ -45,7 +46,7 @@ void Deck::shuffle(){
 }
 Card Deck::dealCard() {
     if (myIndex == SIZE){
-        printf("Deck full");
+        cout << "Deck full";
         Card temp;              //Return default if nothing *FIX ThIS*
         return temp;
     }

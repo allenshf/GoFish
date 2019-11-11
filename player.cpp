@@ -41,8 +41,8 @@ bool Player::checkHandForBook(Card &c1, Card &c2){
 // comment out if you decide to not use it
 //Does the player have a card with the same rank as c in her hand?
 bool Player::rankInHand(Card c) const{
-    for(Card temp: myHand){
-        if(temp.getRank() == c.getRank())
+    for(int i = 0; i < myHand.size(); i++){
+        if(myHand[i].getRank() == c.getRank())
             return true;
     }
     return false;
@@ -57,8 +57,8 @@ Card Player::chooseCardFromHand() const{
 
 //Does the player have the card c in her hand?
 bool Player::cardInHand(Card c) const{
-    for(Card temp : myHand){
-        if(temp == c)
+    for(int i = 0; i < myHand.size(); i++){
+        if(myHand[i] == c)
             return true;
     }
     return false;
@@ -79,8 +79,8 @@ Card Player::removeCardFromHand(Card c){
 
 string Player::showHand() const{
     string out ="";
-    for(Card c:myHand){
-        out += c.toString() + " ";
+    for(int i = 0; i < myHand.size(); i++){
+        out += myHand[i].toString() + " ";
     }
     return out;
 }
